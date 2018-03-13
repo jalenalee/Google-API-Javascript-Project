@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>My First Google Map</h1>
+
+    <div id="googleMap" style="width:100%;height:400px;"></div>
+
+<!-- LINK TO GOOGLE MAPS API --> 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWy_sUQwsWzGMK8qMnCmw7R-gRIRTQXlk&callback=myMap"></script>
+
+<!-- MAP SCRIPTS --> 
+<script>
+    window.onload = (function myMap (){
+        var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+        var mapCanvas = document.getElementById ("googleMap");
+        var mapOptions = {
+            center: myCenter,
+            zoom:5
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+    });
+</script>
+
+
+</body>
+</html>
